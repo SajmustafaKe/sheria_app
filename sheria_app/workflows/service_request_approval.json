@@ -1,0 +1,80 @@
+{
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "name": "Service Request Approval",
+ "document_type": "Service Request",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "doc_status": "0",
+   "icon": "draft",
+   "is_optional_state": 0,
+   "state": "Draft",
+   "style": ""
+  },
+  {
+   "doc_status": "0",
+   "icon": "submitted",
+   "is_optional_state": 0,
+   "state": "Submitted",
+   "style": ""
+  },
+  {
+   "doc_status": "0",
+   "icon": "review",
+   "is_optional_state": 0,
+   "state": "Under Review",
+   "style": "Warning"
+  },
+  {
+   "doc_status": "1",
+   "icon": "approved",
+   "is_optional_state": 0,
+   "state": "Approved",
+   "style": "Success"
+  },
+  {
+   "doc_status": "2",
+   "icon": "rejected",
+   "is_optional_state": 0,
+   "state": "Rejected",
+   "style": "Danger"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Submit",
+   "allowed": "Client, Legal Assistant",
+   "next_state": "Submitted",
+   "state": "Draft"
+  },
+  {
+   "action": "Review",
+   "allowed": "Legal Assistant, Paralegal",
+   "next_state": "Under Review",
+   "state": "Submitted"
+  },
+  {
+   "action": "Approve",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Approved",
+   "state": "Under Review"
+  },
+  {
+   "action": "Reject",
+   "allowed": "Legal Admin, Lawyer, Paralegal",
+   "next_state": "Rejected",
+   "state": "Under Review"
+  },
+  {
+   "action": "Resubmit",
+   "allowed": "Client, Legal Assistant",
+   "next_state": "Submitted",
+   "state": "Rejected"
+  }
+ ],
+ "workflow_name": "Service Request Approval",
+ "workflow_state_field": "status"
+}

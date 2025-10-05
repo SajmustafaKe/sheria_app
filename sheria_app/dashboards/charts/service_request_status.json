@@ -1,0 +1,21 @@
+{
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "name": "Service Request Status",
+ "chart_name": "Service Request Status",
+ "chart_type": "Donut",
+ "document_type": "Service Request",
+ "filters_json": "{\"docstatus\": 1}",
+ "group_by_type": "Group By",
+ "group_by_based_on": "status",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Sheria",
+ "number_of_groups": 0,
+ "time_interval": "Monthly",
+ "timeseries": 0,
+ "type": "Donut",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

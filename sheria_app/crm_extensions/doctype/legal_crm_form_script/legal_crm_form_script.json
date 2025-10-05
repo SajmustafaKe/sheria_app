@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-10-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "script_name",
+  "doctype_name",
+  "column_break_script",
+  "is_active",
+  "section_break_script",
+  "javascript_code",
+  "section_break_python",
+  "python_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "script_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Script Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Select",
+   "label": "DocType",
+   "options": "Legal CRM Lead\nLegal CRM Deal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_script",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_script",
+   "fieldtype": "Section Break",
+   "label": "JavaScript Code"
+  },
+  {
+   "fieldname": "javascript_code",
+   "fieldtype": "Code",
+   "label": "JavaScript Code",
+   "options": "JavaScript"
+  },
+  {
+   "fieldname": "section_break_python",
+   "fieldtype": "Section Break",
+   "label": "Python Code"
+  },
+  {
+   "fieldname": "python_code",
+   "fieldtype": "Code",
+   "label": "Python Code",
+   "options": "Python"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-10-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CRM Extensions",
+ "name": "Legal CRM Form Script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "script_name",
+ "track_changes": 1
+}

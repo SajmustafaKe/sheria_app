@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-10-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "document_type",
+  "practice_area",
+  "column_break_template",
+  "is_active",
+  "description",
+  "section_break_content",
+  "template_content",
+  "section_break_fields",
+  "merge_fields",
+  "section_break_settings",
+  "output_format",
+  "generate_pdf",
+  "column_break_settings",
+  "auto_generate",
+  "trigger_event"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "label": "Document Type",
+   "options": "Engagement Letter\nRetainer Agreement\nPower of Attorney\nAffidavit\nPetition\nContract\nInvoice\nReceipt\nCorrespondence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "practice_area",
+   "fieldtype": "Link",
+   "label": "Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "column_break_template",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 1,
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_content",
+   "fieldtype": "Section Break",
+   "label": "Template Content"
+  },
+  {
+   "fieldname": "template_content",
+   "fieldtype": "Text Editor",
+   "label": "Template Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_fields",
+   "fieldtype": "Section Break",
+   "label": "Merge Fields"
+  },
+  {
+   "fieldname": "merge_fields",
+   "fieldtype": "Table",
+   "label": "Merge Fields",
+   "options": "Legal Document Merge Field"
+  },
+  {
+   "fieldname": "section_break_settings",
+   "fieldtype": "Section Break",
+   "label": "Generation Settings"
+  },
+  {
+   "default": "DOCX",
+   "fieldname": "output_format",
+   "fieldtype": "Select",
+   "label": "Output Format",
+   "options": "DOCX\nPDF\nHTML"
+  },
+  {
+   "default": 1,
+   "fieldname": "generate_pdf",
+   "fieldtype": "Check",
+   "label": "Generate PDF"
+  },
+  {
+   "fieldname": "column_break_settings",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_generate",
+   "fieldtype": "Check",
+   "label": "Auto Generate"
+  },
+  {
+   "fieldname": "trigger_event",
+   "fieldtype": "Select",
+   "label": "Trigger Event",
+   "options": "Lead Created\nDeal Won\nCase Created\nManual"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-10-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CRM Extensions",
+ "name": "Legal Document Template",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Lawyer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "template_name",
+ "track_changes": 1
+}

@@ -1,0 +1,405 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{####}-{header_case_number}-{header_case_year}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "header",
+  "header_court",
+  "header_case_type",
+  "header_case_number",
+  "header_case_year",
+  "header_practice_area",
+  "column_break_4",
+  "judge_table",
+  "header_case_status",
+  "ar",
+  "appellant_table",
+  "column_break_12",
+  "respondent_table",
+  "claims_and_liabilties_section",
+  "claims",
+  "liability",
+  "appeal_from_section",
+  "case",
+  "appeal_from_court",
+  "appeal_from_judge",
+  "appeal_from_column_break",
+  "appeal_from_date",
+  "appeal_from_case_number",
+  "appeal_from_year",
+  "court_proceedings_section",
+  "case_details",
+  "case_details_title",
+  "case_details_client_name",
+  "case_details_date_opened",
+  "case_details_section_break",
+  "case_details_assigned_to",
+  "last_activity_date",
+  "payment",
+  "payment_fees_fixed",
+  "payment_fees_per_trial",
+  "payment_column_break",
+  "payment_fees_per_hour",
+  "legislation",
+  "legislation_table",
+  "opposition_lawyer_section",
+  "legislation_opposition_lawyer",
+  "result_history",
+  "result_history_table",
+  "attachments",
+  "case_documents_table",
+  "judgement",
+  "judgement_description",
+  "judgement_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "header",
+   "fieldtype": "Section Break",
+   "label": "Case Header"
+  },
+  {
+   "fieldname": "header_court",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "label": "Court/Tribunal",
+   "options": "Court"
+  },
+  {
+   "fieldname": "header_case_type",
+   "fieldtype": "Link",
+   "label": "Case Type",
+   "options": "Case Type"
+  },
+  {
+   "fieldname": "header_case_number",
+   "fieldtype": "Data",
+   "label": "Case Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "header_case_year",
+   "fieldtype": "Data",
+   "label": "Case Year"
+  },
+  {
+   "fieldname": "header_practice_area",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "judge_table",
+   "fieldtype": "Table",
+   "label": "Judge(s)",
+   "options": "Judge Table"
+  },
+  {
+   "fieldname": "header_case_status",
+   "fieldtype": "Table",
+   "label": "Case Status",
+   "options": "Case Status Table"
+  },
+  {
+   "fieldname": "ar",
+   "fieldtype": "Section Break",
+   "label": "Parties"
+  },
+  {
+   "fieldname": "appellant_table",
+   "fieldtype": "Table",
+   "label": "Plaintiff(s)/Applicant(s)/Appellant(s)/Claimant(s)",
+   "options": "Appellant Table"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respondent_table",
+   "fieldtype": "Table",
+   "label": "Defendant(s)/Respondent(s)",
+   "options": "Respondent Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "claims_and_liabilties_section",
+   "fieldtype": "Section Break",
+   "label": "Claims and Liabilities"
+  },
+  {
+   "fieldname": "claims",
+   "fieldtype": "Text Editor",
+   "label": "Claims"
+  },
+  {
+   "fieldname": "liability",
+   "fieldtype": "Text Editor",
+   "label": "Liability"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "appeal_from_section",
+   "fieldtype": "Section Break",
+   "label": "Appeal From"
+  },
+  {
+   "fieldname": "case",
+   "fieldtype": "Link",
+   "label": "Original Case",
+   "options": "Legal Case"
+  },
+  {
+   "fetch_from": "case.header_court",
+   "fieldname": "appeal_from_court",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Original Court",
+   "options": "Court"
+  },
+  {
+   "fieldname": "appeal_from_judge",
+   "fieldtype": "Link",
+   "label": "Original Judge",
+   "options": "Judge"
+  },
+  {
+   "fieldname": "appeal_from_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appeal_from_date",
+   "fieldtype": "Date",
+   "label": "Appeal Date"
+  },
+  {
+   "fetch_from": "case.header_case_number",
+   "fieldname": "appeal_from_case_number",
+   "fieldtype": "Data",
+   "label": "Original Case Number"
+  },
+  {
+   "fetch_from": "case.header_case_year",
+   "fieldname": "appeal_from_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Original Case Year"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "court_proceedings_section",
+   "fieldtype": "Section Break",
+   "label": "Court Proceedings"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "case_details",
+   "fieldtype": "Section Break",
+   "label": "Case Details"
+  },
+  {
+   "columns": 2,
+   "fieldname": "case_details_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Case Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "case_details_client_name",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "case_details_date_opened",
+   "fieldtype": "Date",
+   "label": "Date Opened"
+  },
+  {
+   "fieldname": "case_details_section_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "case_details_assigned_to",
+   "fieldtype": "Table",
+   "label": "Assigned Lawyers",
+   "options": "Lawyer Table"
+  },
+  {
+   "fieldname": "last_activity_date",
+   "fieldtype": "Date",
+   "label": "Last Activity Date",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payment",
+   "fieldtype": "Section Break",
+   "label": "Fee Structure"
+  },
+  {
+   "fieldname": "payment_fees_fixed",
+   "fieldtype": "Currency",
+   "label": "Fixed Fees"
+  },
+  {
+   "fieldname": "payment_fees_per_trial",
+   "fieldtype": "Currency",
+   "label": "Fees Per Hearing"
+  },
+  {
+   "fieldname": "payment_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_fees_per_hour",
+   "fieldtype": "Currency",
+   "label": "Hourly Rate"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "legislation",
+   "fieldtype": "Section Break",
+   "label": "Relevant Legislation"
+  },
+  {
+   "fieldname": "legislation_table",
+   "fieldtype": "Table",
+   "label": "Legislation",
+   "options": "Legislation Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "opposition_lawyer_section",
+   "fieldtype": "Section Break",
+   "label": "Opposition Counsel"
+  },
+  {
+   "fieldname": "legislation_opposition_lawyer",
+   "fieldtype": "Table",
+   "label": "Opposition Lawyers",
+   "options": "Opposition Lawyer Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "result_history",
+   "fieldtype": "Section Break",
+   "label": "Case History"
+  },
+  {
+   "fieldname": "result_history_table",
+   "fieldtype": "Table",
+   "label": "Case Updates",
+   "options": "Result History Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attachments",
+   "fieldtype": "Section Break",
+   "label": "Case Documents"
+  },
+  {
+   "fieldname": "case_documents_table",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Case Documents Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "judgement",
+   "fieldtype": "Section Break",
+   "label": "Judgement"
+  },
+  {
+   "fieldname": "judgement_description",
+   "fieldtype": "Text Editor",
+   "label": "Judgement Summary"
+  },
+  {
+   "fieldname": "judgement_document",
+   "fieldtype": "Attach",
+   "label": "Judgement Document"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Legal Practice",
+ "name": "Legal Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Lawyer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Assistant",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "website": {
+  "condition_field": "published",
+  "page_name_field": "name",
+  "template": "legal_case_profile"
+ }
+}

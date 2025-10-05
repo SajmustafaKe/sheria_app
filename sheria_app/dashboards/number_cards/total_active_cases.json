@@ -1,0 +1,16 @@
+{
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "name": "Total Active Cases",
+ "aggregate_function_based_on": "",
+ "color": "#4CAF50",
+ "document_type": "Legal Case",
+ "filters_json": "{\"status\": [\"in\", [\"Open\", \"In Progress\", \"Hearing Scheduled\"]], \"docstatus\": 1}",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Total Active Cases",
+ "module": "Sheria",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly"
+}

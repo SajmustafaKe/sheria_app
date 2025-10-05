@@ -1,0 +1,16 @@
+{
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "name": "Upcoming Hearings",
+ "aggregate_function_based_on": "",
+ "color": "#2196F3",
+ "document_type": "Case Hearing",
+ "filters_json": "{\"status\": \"Scheduled\", \"hearing_date\": [\">=\", \"Today\"], \"docstatus\": 1}",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Upcoming Hearings",
+ "module": "Sheria",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Weekly"
+}

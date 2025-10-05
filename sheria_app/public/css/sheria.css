@@ -1,0 +1,316 @@
+/* Sheria App Styles */
+/* Copyright (c) 2024, Sheria Legal Technologies */
+/* For license information, please see license.txt */
+
+/* Legal Dashboard Styles */
+.legal-dashboard {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.legal-dashboard .card {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease;
+}
+
+.legal-dashboard .card:hover {
+	transform: translateY(-5px);
+}
+
+.legal-dashboard .stat-card {
+	background: rgba(255,255,255,0.9);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+.legal-dashboard .stat-card .card-body {
+	padding: 30px;
+	text-align: center;
+}
+
+.legal-dashboard .stat-card h3 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.legal-dashboard .stat-card p {
+	font-size: 1.1rem;
+	color: #666;
+	margin: 0;
+}
+
+/* Timeline Styles */
+.timeline {
+	position: relative;
+	padding-left: 30px;
+}
+
+.timeline::before {
+	content: '';
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: #e9ecef;
+}
+
+.timeline-item {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.timeline-marker {
+	position: absolute;
+	left: -22px;
+	top: 5px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #007bff;
+	border: 3px solid #fff;
+	box-shadow: 0 0 0 2px #007bff;
+}
+
+.timeline-content {
+	background: #f8f9fa;
+	padding: 15px;
+	border-radius: 8px;
+	border-left: 4px solid #007bff;
+}
+
+.timeline-content h6 {
+	margin-bottom: 5px;
+	color: #007bff;
+}
+
+.timeline-content p {
+	margin-bottom: 5px;
+	color: #666;
+}
+
+/* Client Portal Styles */
+.client-portal {
+	background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.client-portal .service-card {
+	background: rgba(255,255,255,0.95);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	transition: all 0.3s ease;
+	border: none;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.client-portal .service-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.client-portal .service-card .card-body {
+	padding: 25px;
+}
+
+.client-portal .service-card .card-title {
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.client-portal .service-card .card-text {
+	color: #666;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.client-portal .service-card .btn {
+	border-radius: 25px;
+	padding: 10px 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+
+.client-portal .service-card .btn:hover {
+	transform: scale(1.05);
+}
+
+/* Legal Forms Styles */
+.legal-form {
+	background: #fff;
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.legal-form .form-group {
+	margin-bottom: 25px;
+}
+
+.legal-form label {
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.legal-form .form-control {
+	border: 2px solid #e9ecef;
+	border-radius: 8px;
+	padding: 12px 15px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+.legal-form .form-control:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.legal-form .btn-primary {
+	background: linear-gradient(45deg, #007bff, #0056b3);
+	border: none;
+	border-radius: 25px;
+	padding: 12px 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+
+.legal-form .btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+}
+
+/* Status Badges */
+.status-badge {
+	padding: 5px 12px;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+	background: #28a745;
+	color: white;
+}
+
+.status-badge.pending {
+	background: #ffc107;
+	color: #212529;
+}
+
+.status-badge.closed {
+	background: #6c757d;
+	color: white;
+}
+
+.status-badge.urgent {
+	background: #dc3545;
+	color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.legal-dashboard,
+	.client-portal {
+		padding: 10px;
+	}
+
+	.legal-dashboard .card,
+	.client-portal .service-card {
+		margin-bottom: 20px;
+	}
+
+	.timeline {
+		padding-left: 20px;
+	}
+
+	.timeline-marker {
+		left: -15px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.legal-dashboard,
+	.client-portal {
+		background: white !important;
+	}
+
+	.card {
+		box-shadow: none !important;
+		border: 1px solid #ddd !important;
+	}
+
+	.btn {
+		display: none !important;
+	}
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+	.legal-form {
+		background: #2d3748;
+		color: #e2e8f0;
+	}
+
+	.legal-form label {
+		color: #e2e8f0;
+	}
+
+	.legal-form .form-control {
+		background: #4a5568;
+		border-color: #718096;
+		color: #e2e8f0;
+	}
+
+	.timeline-content {
+		background: #4a5568;
+		color: #e2e8f0;
+	}
+}
+
+/* Accessibility */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Focus styles for keyboard navigation */
+.btn:focus,
+.form-control:focus,
+.card:focus {
+	outline: 2px solid #007bff;
+	outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+	.legal-form .form-control {
+		border-width: 3px;
+	}
+
+	.status-badge {
+		border: 2px solid currentColor;
+	}
+}

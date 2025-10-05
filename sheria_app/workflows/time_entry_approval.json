@@ -1,0 +1,67 @@
+{
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "name": "Time Entry Approval",
+ "document_type": "Time Entry",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "doc_status": "0",
+   "icon": "draft",
+   "is_optional_state": 0,
+   "state": "Draft",
+   "style": ""
+  },
+  {
+   "doc_status": "0",
+   "icon": "submitted",
+   "is_optional_state": 0,
+   "state": "Submitted",
+   "style": ""
+  },
+  {
+   "doc_status": "1",
+   "icon": "approved",
+   "is_optional_state": 0,
+   "state": "Approved",
+   "style": "Success"
+  },
+  {
+   "doc_status": "2",
+   "icon": "rejected",
+   "is_optional_state": 0,
+   "state": "Rejected",
+   "style": "Danger"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Submit",
+   "allowed": "Employee, Paralegal",
+   "next_state": "Submitted",
+   "state": "Draft"
+  },
+  {
+   "action": "Approve",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Approved",
+   "state": "Submitted"
+  },
+  {
+   "action": "Reject",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Rejected",
+   "state": "Submitted"
+  },
+  {
+   "action": "Resubmit",
+   "allowed": "Employee, Paralegal",
+   "next_state": "Submitted",
+   "state": "Rejected"
+  }
+ ],
+ "workflow_name": "Time Entry Approval",
+ "workflow_state_field": "status"
+}

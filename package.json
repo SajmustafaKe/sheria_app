@@ -1,0 +1,17 @@
+{
+  "name": "sheria_app",
+  "description": "Sheria Law Management System - Comprehensive ERPNext app for Kenyan law firms",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/sheria_app.git"
+  },
+  "homepage": "https://sheria_app.law",
+  "author": "Sheria App Development Team",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/your-org/sheria_app/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

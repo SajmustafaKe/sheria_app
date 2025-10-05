@@ -1,0 +1,211 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="legal-service-profile">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="service-header">
+					<h1>{{ doc.service_name }}</h1>
+					<div class="service-meta">
+						<span class="service-code">Service Code: {{ doc.service_code }}</span>
+						<span class="service-category badge badge-primary">{{ doc.category }}</span>
+						{% if doc.featured %}
+						<span class="badge badge-warning">Featured</span>
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="service-description">
+					<h3>Description</h3>
+					<div class="description-content">
+						{{ doc.description }}
+					</div>
+				</div>
+
+				{% if doc.requirements %}
+				<div class="service-requirements">
+					<h3>Requirements</h3>
+					<div class="requirements-content">
+						{{ doc.requirements }}
+					</div>
+				</div>
+				{% endif %}
+
+				<div class="service-details">
+					<div class="row">
+						<div class="col-md-6">
+							<h3>Service Details</h3>
+							<table class="table table-striped">
+								<tr>
+									<td><strong>Timeline:</strong></td>
+									<td>{{ doc.timeline or "Not specified" }}</td>
+								</tr>
+								<tr>
+									<td><strong>Estimated Duration:</strong></td>
+									<td>{{ doc.estimated_duration or "Not specified" }}</td>
+								</tr>
+								<tr>
+									<td><strong>Complexity Level:</strong></td>
+									<td>{{ doc.complexity_level or "Not specified" }}</td>
+								</tr>
+								<tr>
+									<td><strong>Billing Type:</strong></td>
+									<td>{{ doc.billing_type or "Not specified" }}</td>
+								</tr>
+								{% if doc.price %}
+								<tr>
+									<td><strong>Price:</strong></td>
+									<td>{{ doc.price }} {{ doc.currency or "KES" }}</td>
+								</tr>
+								{% endif %}
+							</table>
+						</div>
+						<div class="col-md-6">
+							{% if doc.deliverables %}
+							<h3>Deliverables</h3>
+							<div class="deliverables-content">
+								{{ doc.deliverables }}
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+
+				{% if doc.eligibility_criteria %}
+				<div class="service-eligibility">
+					<h3>Eligibility Criteria</h3>
+					<div class="eligibility-content">
+						{{ doc.eligibility_criteria }}
+					</div>
+				</div>
+				{% endif %}
+
+				{% if doc.exclusions %}
+				<div class="service-exclusions">
+					<h3>Exclusions</h3>
+					<div class="exclusions-content">
+						{{ doc.exclusions }}
+					</div>
+				</div>
+				{% endif %}
+
+				{% if doc.terms_and_conditions %}
+				<div class="service-terms">
+					<h3>Terms and Conditions</h3>
+					<div class="terms-content">
+						{{ doc.terms_and_conditions }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+
+			<div class="col-md-4">
+				<div class="service-sidebar">
+					<div class="request-service-card">
+						<h4>Request This Service</h4>
+						<p>Get professional legal assistance for this service.</p>
+						<a href="/request-service?service={{ doc.name }}" class="btn btn-primary btn-block">
+							Request Service
+						</a>
+					</div>
+
+					<div class="service-stats">
+						<h4>Service Information</h4>
+						<ul class="list-unstyled">
+							<li><strong>Status:</strong> {% if doc.is_active %}Active{% else %}Inactive{% endif %}</li>
+							<li><strong>Created:</strong> {{ frappe.utils.format_date(doc.creation_date) }}</li>
+							{% if doc.last_updated %}
+							<li><strong>Last Updated:</strong> {{ frappe.utils.format_datetime(doc.last_updated) }}</li>
+							{% endif %}
+						</ul>
+					</div>
+
+					{% if doc.approved_by %}
+					<div class="service-approval">
+						<h4>Approval</h4>
+						<p>Approved by: {{ doc.approved_by }}</p>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+.legal-service-profile {
+	padding: 20px 0;
+}
+
+.service-header h1 {
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.service-meta {
+	margin-bottom: 20px;
+}
+
+.service-meta .badge {
+	margin-right: 10px;
+}
+
+.service-description,
+.service-requirements,
+.service-details,
+.service-eligibility,
+.service-exclusions,
+.service-terms {
+	margin-bottom: 30px;
+}
+
+.service-description h3,
+.service-requirements h3,
+.service-details h3,
+.service-eligibility h3,
+.service-exclusions h3,
+.service-terms h3 {
+	color: #34495e;
+	border-bottom: 2px solid #3498db;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.description-content,
+.requirements-content,
+.deliverables-content,
+.eligibility-content,
+.exclusions-content,
+.terms-content {
+	line-height: 1.6;
+}
+
+.service-sidebar .card {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.request-service-card {
+	background-color: #f8f9fa;
+	text-align: center;
+}
+
+.request-service-card h4 {
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.service-stats h4,
+.service-approval h4 {
+	color: #34495e;
+	margin-bottom: 10px;
+}
+
+.service-stats ul li {
+	margin-bottom: 5px;
+}
+</style>
+{% endblock %}

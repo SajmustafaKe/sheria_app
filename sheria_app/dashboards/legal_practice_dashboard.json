@@ -1,0 +1,53 @@
+{
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "name": "Legal Practice Dashboard",
+ "dashboard_name": "Legal Practice Dashboard",
+ "is_default": 1,
+ "is_standard": 1,
+ "module": "Sheria",
+ "charts": [
+  {
+   "chart_name": "Case Status Distribution",
+   "label": "Case Status Distribution"
+  },
+  {
+   "chart_name": "Monthly Case Intake",
+   "label": "Monthly Case Intake"
+  },
+  {
+   "chart_name": "Time Entries by Month",
+   "label": "Time Entries by Month"
+  },
+  {
+   "chart_name": "Service Request Status",
+   "label": "Service Request Status"
+  }
+ ],
+ "cards": [
+  {
+   "card_name": "Total Active Cases",
+   "label": "Total Active Cases"
+  },
+  {
+   "card_name": "Pending Time Approvals",
+   "label": "Pending Time Approvals"
+  },
+  {
+   "card_name": "Upcoming Hearings",
+   "label": "Upcoming Hearings"
+  },
+  {
+   "card_name": "Open Service Requests",
+   "label": "Open Service Requests"
+  },
+  {
+   "card_name": "Monthly Revenue",
+   "label": "Monthly Revenue"
+  },
+  {
+   "card_name": "Active Tasks",
+   "label": "Active Tasks"
+  }
+ ]
+}

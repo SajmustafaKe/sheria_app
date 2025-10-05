@@ -1,0 +1,32 @@
+{% extends "templates/emails/standard.html" %}
+
+{% block content %}
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+    <h2 style="color: #2c3e50;">Hearing Reminder</h2>
+
+    <p>Dear {{ recipient_fullname }},</p>
+
+    <p>This is a reminder for an upcoming court hearing:</p>
+
+    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #2c3e50;">{{ case.case_title }}</h3>
+        <p><strong>Case Number:</strong> {{ case.name }}</p>
+        <p><strong>Client:</strong> {{ case.client_name }}</p>
+        <p><strong>Hearing Date:</strong> {{ frappe.utils.format_date(hearing.hearing_date) }}</p>
+        <p><strong>Hearing Time:</strong> {{ hearing.hearing_time or "Not specified" }}</p>
+        <p><strong>Court:</strong> {{ hearing.court }}</p>
+        <p><strong>Judge:</strong> {{ hearing.judge or "Not specified" }}</p>
+        <p><strong>Hearing Type:</strong> {{ hearing.hearing_type }}</p>
+        {% if hearing.notes %}
+        <p><strong>Notes:</strong> {{ hearing.notes }}</p>
+        {% endif %}
+    </div>
+
+    <p>Please ensure all necessary preparations are complete and arrive at the court on time.</p>
+
+    <p>If you have any questions, please contact the case manager.</p>
+
+    <p>Best regards,<br>
+    Sheria Legal Practice Management System</p>
+</div>
+{% endblock %}

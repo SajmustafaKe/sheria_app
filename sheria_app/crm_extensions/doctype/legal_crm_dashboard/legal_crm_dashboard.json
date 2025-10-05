@@ -1,0 +1,259 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-10-04 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dashboard",
+  "dashboard_name",
+  "column_break_dashboard",
+  "is_default",
+  "section_break_filters",
+  "date_range",
+  "practice_area_filter",
+  "column_break_filters",
+  "lawyer_filter",
+  "client_type_filter",
+  "section_break_metrics",
+  "total_leads",
+  "qualified_leads",
+  "conversion_rate",
+  "column_break_metrics",
+  "total_deals",
+  "won_deals",
+  "pipeline_value",
+  "section_break_charts",
+  "leads_by_practice_area",
+  "deals_by_status",
+  "column_break_charts",
+  "monthly_revenue",
+  "trust_balance_summary",
+  "section_break_recent",
+  "recent_leads",
+  "recent_deals",
+  "column_break_recent",
+  "upcoming_deadlines",
+  "low_trust_balances"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dashboard",
+   "fieldtype": "Section Break",
+   "label": "Dashboard Settings"
+  },
+  {
+   "fieldname": "dashboard_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dashboard Name",
+   "reqd": 1
+  },
+  {
+   "default": 0,
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default Dashboard"
+  },
+  {
+   "fieldname": "column_break_dashboard",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_filters",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "fieldname": "date_range",
+   "fieldtype": "Select",
+   "label": "Date Range",
+   "options": "This Month\nLast Month\nThis Quarter\nLast Quarter\nThis Year\nLast Year\nCustom Range"
+  },
+  {
+   "fieldname": "practice_area_filter",
+   "fieldtype": "Link",
+   "label": "Practice Area",
+   "options": "Practice Area"
+  },
+  {
+   "fieldname": "column_break_filters",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lawyer_filter",
+   "fieldtype": "Link",
+   "label": "Assigned Lawyer",
+   "options": "Lawyer"
+  },
+  {
+   "fieldname": "client_type_filter",
+   "fieldtype": "Select",
+   "label": "Client Type",
+   "options": "Individual\nCompany\nGovernment\nNGO\nTrust\nPartnership\nOther"
+  },
+  {
+   "fieldname": "section_break_metrics",
+   "fieldtype": "Section Break",
+   "label": "Key Metrics"
+  },
+  {
+   "fieldname": "total_leads",
+   "fieldtype": "Int",
+   "label": "Total Leads",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qualified_leads",
+   "fieldtype": "Int",
+   "label": "Qualified Leads",
+   "read_only": 1
+  },
+  {
+   "fieldname": "conversion_rate",
+   "fieldtype": "Percent",
+   "label": "Conversion Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_metrics",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deals",
+   "fieldtype": "Int",
+   "label": "Total Deals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "won_deals",
+   "fieldtype": "Int",
+   "label": "Won Deals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pipeline_value",
+   "fieldtype": "Currency",
+   "label": "Pipeline Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_charts",
+   "fieldtype": "Section Break",
+   "label": "Charts & Analytics"
+  },
+  {
+   "fieldname": "leads_by_practice_area",
+   "fieldtype": "Code",
+   "label": "Leads by Practice Area",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deals_by_status",
+   "fieldtype": "Code",
+   "label": "Deals by Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_charts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_revenue",
+   "fieldtype": "Code",
+   "label": "Monthly Revenue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trust_balance_summary",
+   "fieldtype": "Code",
+   "label": "Trust Balance Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_recent",
+   "fieldtype": "Section Break",
+   "label": "Recent Activity"
+  },
+  {
+   "fieldname": "recent_leads",
+   "fieldtype": "Code",
+   "label": "Recent Leads",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recent_deals",
+   "fieldtype": "Code",
+   "label": "Recent Deals",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_recent",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upcoming_deadlines",
+   "fieldtype": "Code",
+   "label": "Upcoming Deadlines",
+   "read_only": 1
+  },
+  {
+   "fieldname": "low_trust_balances",
+   "fieldtype": "Code",
+   "label": "Low Trust Balances",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-10-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "CRM Extensions",
+ "name": "Legal CRM Dashboard",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Lawyer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "dashboard_name",
+ "track_changes": 1
+}

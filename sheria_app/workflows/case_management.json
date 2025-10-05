@@ -1,0 +1,118 @@
+{
+ "docstatus": 0,
+ "doctype": "Workflow",
+ "name": "Case Management",
+ "document_type": "Legal Case",
+ "is_active": 1,
+ "override_status": 0,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "doc_status": "0",
+   "icon": "draft",
+   "is_optional_state": 0,
+   "state": "Draft",
+   "style": ""
+  },
+  {
+   "doc_status": "0",
+   "icon": "open",
+   "is_optional_state": 0,
+   "state": "Open",
+   "style": "Primary"
+  },
+  {
+   "doc_status": "0",
+   "icon": "in-progress",
+   "is_optional_state": 0,
+   "state": "In Progress",
+   "style": "Warning"
+  },
+  {
+   "doc_status": "0",
+   "icon": "hearing",
+   "is_optional_state": 0,
+   "state": "Hearing Scheduled",
+   "style": "Info"
+  },
+  {
+   "doc_status": "0",
+   "icon": "settled",
+   "is_optional_state": 0,
+   "state": "Settled",
+   "style": "Success"
+  },
+  {
+   "doc_status": "1",
+   "icon": "closed",
+   "is_optional_state": 0,
+   "state": "Closed",
+   "style": "Secondary"
+  },
+  {
+   "doc_status": "2",
+   "icon": "cancelled",
+   "is_optional_state": 0,
+   "state": "Cancelled",
+   "style": "Danger"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Open Case",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Open",
+   "state": "Draft"
+  },
+  {
+   "action": "Start Work",
+   "allowed": "Lawyer, Paralegal",
+   "next_state": "In Progress",
+   "state": "Open"
+  },
+  {
+   "action": "Schedule Hearing",
+   "allowed": "Lawyer, Legal Admin",
+   "next_state": "Hearing Scheduled",
+   "state": "In Progress"
+  },
+  {
+   "action": "Settle Case",
+   "allowed": "Lawyer, Legal Admin",
+   "next_state": "Settled",
+   "state": "In Progress"
+  },
+  {
+   "action": "Settle Case",
+   "allowed": "Lawyer, Legal Admin",
+   "next_state": "Settled",
+   "state": "Hearing Scheduled"
+  },
+  {
+   "action": "Close Case",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Closed",
+   "state": "Settled"
+  },
+  {
+   "action": "Cancel Case",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Cancelled",
+   "state": "Open"
+  },
+  {
+   "action": "Cancel Case",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Cancelled",
+   "state": "In Progress"
+  },
+  {
+   "action": "Reopen Case",
+   "allowed": "Legal Admin, Lawyer",
+   "next_state": "Open",
+   "state": "Closed"
+  }
+ ],
+ "workflow_name": "Case Management",
+ "workflow_state_field": "status"
+}

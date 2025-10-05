@@ -1,0 +1,21 @@
+{
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "name": "Case Status Distribution",
+ "chart_name": "Case Status Distribution",
+ "chart_type": "Donut",
+ "document_type": "Legal Case",
+ "filters_json": "{\"docstatus\": 1}",
+ "group_by_type": "Group By",
+ "group_by_based_on": "status",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Sheria",
+ "number_of_groups": 0,
+ "time_interval": "Monthly",
+ "timeseries": 0,
+ "type": "Donut",
+ "use_report_chart": 0,
+ "value_based_on": "",
+ "y_axis": []
+}

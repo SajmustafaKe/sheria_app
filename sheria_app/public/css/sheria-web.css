@@ -1,0 +1,202 @@
+/* Sheria Web Styles */
+/* For web pages and forms */
+
+.sheria-web-header {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.sheria-web-header h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.sheria-web-header p {
+	font-size: 1.2rem;
+	opacity: 0.9;
+}
+
+.service-booking-form {
+	background: white;
+	border-radius: 15px;
+	padding: 40px;
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	margin-top: -30px;
+	position: relative;
+	z-index: 10;
+}
+
+.service-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	margin: 40px 0;
+}
+
+.service-card-web {
+	background: white;
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+	border: 2px solid transparent;
+}
+
+.service-card-web:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+	border-color: #007bff;
+}
+
+.service-card-web .service-icon {
+	font-size: 3rem;
+	color: #007bff;
+	margin-bottom: 20px;
+}
+
+.service-card-web h3 {
+	color: #333;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.service-card-web p {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 25px;
+}
+
+.service-card-web .price {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #28a745;
+	margin-bottom: 20px;
+}
+
+.service-card-web .btn {
+	border-radius: 25px;
+	padding: 12px 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+
+.service-card-web .btn:hover {
+	transform: scale(1.05);
+}
+
+.testimonials-section {
+	background: #f8f9fa;
+	padding: 60px 0;
+}
+
+.testimonial-card {
+	background: white;
+	border-radius: 15px;
+	padding: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	margin: 20px 0;
+}
+
+.testimonial-card .client-photo {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
+.testimonial-card blockquote {
+	font-style: italic;
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.testimonial-card .client-name {
+	font-weight: bold;
+	color: #333;
+}
+
+.testimonial-card .client-title {
+	color: #007bff;
+	font-size: 0.9rem;
+}
+
+.contact-section {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.contact-form {
+	background: rgba(255,255,255,0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	padding: 40px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.contact-form .form-group {
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.contact-form label {
+	font-weight: bold;
+	margin-bottom: 8px;
+	display: block;
+}
+
+.contact-form .form-control {
+	background: rgba(255,255,255,0.9);
+	border: none;
+	border-radius: 8px;
+	padding: 12px 15px;
+	font-size: 1rem;
+}
+
+.contact-form .btn {
+	background: #28a745;
+	border: none;
+	border-radius: 25px;
+	padding: 12px 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+	background: #218838;
+	transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.sheria-web-header h1 {
+		font-size: 2rem;
+	}
+
+	.service-booking-form {
+		padding: 20px;
+		margin-top: -20px;
+	}
+
+	.service-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.contact-form {
+		padding: 20px;
+	}
+}

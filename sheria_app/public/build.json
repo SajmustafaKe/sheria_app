@@ -1,0 +1,14 @@
+{
+	"css/sheria_app.css": [
+		"public/css/sheria_app.css"
+	],
+	"js/sheria_app.js": [
+		"public/js/sheria_app.js"
+	],
+	"css/sheria-web.css": [
+		"public/css/sheria-web.css"
+	],
+	"js/sheria-web.js": [
+		"public/js/sheria-web.js"
+	]
+}

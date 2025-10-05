@@ -1,0 +1,16 @@
+{
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "name": "Pending Time Approvals",
+ "aggregate_function_based_on": "",
+ "color": "#FF9800",
+ "document_type": "Time Entry",
+ "filters_json": "{\"status\": \"Submitted\", \"docstatus\": 0}",
+ "function": "Count",
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Pending Time Approvals",
+ "module": "Sheria",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Weekly"
+}
