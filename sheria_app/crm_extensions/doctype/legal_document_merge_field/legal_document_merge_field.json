@@ -18,21 +18,6 @@
  ],
  "fields": [
   {
-   "fieldname": "parent",
-   "fieldtype": "Data",
-   "label": "Parent"
-  },
-  {
-   "fieldname": "parenttype",
-   "fieldtype": "Data",
-   "label": "Parent Type"
-  },
-  {
-   "fieldname": "parentfield",
-   "fieldtype": "Data",
-   "label": "Parent Field"
-  },
-  {
    "fieldname": "field_name",
    "fieldtype": "Data",
    "in_list_view": 1,

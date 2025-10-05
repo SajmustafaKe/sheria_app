@@ -6,7 +6,6 @@ import frappe
 from frappe import _
 from frappe.desk.page.setup_wizard.setup_wizard import make_records
 from . import dashboard
-from . import workspace
 from . import web_pages
 from . import permissions
 
@@ -19,32 +18,6 @@ def after_install():
 	try:
 		# Create default records
 		create_default_records()
-
-		# Set up roles and permissions
-		setup_roles_and_permissions()
-
-		# Create default workspaces
-		create_default_workspaces()
-
-		# Create default settings
-		create_default_settings()
-
-		# Create default email templates
-		create_default_email_templates()
-
-		# Create default print formats
-		create_default_print_formats()
-
-		# Create default dashboards
-		dashboard.create_default_dashboards()
-
-		# Create default web pages
-		web_pages.create_default_web_pages()
-
-		# Create default roles and permissions
-		permissions.create_default_roles()
-		permissions.create_default_user_types()
-		permissions.setup_permissions()
 
 		frappe.db.commit()
 
