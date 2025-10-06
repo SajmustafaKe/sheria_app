@@ -1,0 +1,248 @@
+{
+    "category": "Modules",
+    "charts": [
+        {
+            "chart_name": "Case Status Distribution",
+            "label": "Case Status Distribution"
+        },
+        {
+            "chart_name": "Monthly Case Intake",
+            "label": "Monthly Case Intake"
+        },
+        {
+            "chart_name": "Case Type Distribution",
+            "label": "Case Type Distribution"
+        }
+    ],
+    "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Legal Practice Management\", \"level\": 2}}, {\"type\": \"paragraph\", \"data\": {\"text\": \"Manage legal cases, court proceedings, legal research, and practice administration.\"}}, {\"type\": \"spacer\", \"data\": {}}, {\"type\": \"header\", \"data\": {\"text\": \"Case Management\", \"level\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Active Cases\", \"label\": \"Active Cases\"}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pending Hearings\", \"label\": \"Pending Hearings\"}}, {\"type\": \"spacer\", \"data\": {}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Case Status Distribution\", \"label\": \"Case Status Distribution\", \"width\": \"Half\"}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Case Type Distribution\", \"label\": \"Case Type Distribution\", \"width\": \"Half\"}}]",
+    "creation": "2025-10-05 00:00:00.000000",
+    "developer_mode_only": 0,
+    "disable_user_customization": 0,
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "extends_another_page": 0,
+    "hide_custom": 0,
+    "icon": "octicon octicon-law",
+    "idx": 0,
+    "is_default": 0,
+    "is_standard": 1,
+    "label": "Legal Practice",
+    "public": 1,
+    "links": [
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Management",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Cases",
+            "link_count": 0,
+            "link_to": "Legal Case",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Hearings",
+            "link_count": 0,
+            "link_to": "Case Hearing",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Documents",
+            "link_count": 0,
+            "link_to": "Case Document",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Timeline",
+            "link_count": 0,
+            "link_to": "Case Timeline",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Research",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Research",
+            "link_count": 0,
+            "link_to": "Legal Research",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Precedents",
+            "link_count": 0,
+            "link_to": "Legal Precedent",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Practice Setup",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Courts",
+            "link_count": 0,
+            "link_to": "Court",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Judges",
+            "link_count": 0,
+            "link_to": "Judge",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Lawyers",
+            "link_count": 0,
+            "link_to": "Lawyer",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Teams",
+            "link_count": 0,
+            "link_to": "Legal Team",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Practice Areas",
+            "link_count": 0,
+            "link_to": "Practice Area",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Types",
+            "link_count": 0,
+            "link_to": "Case Type",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Case Status",
+            "link_count": 0,
+            "link_to": "Case Status",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Billing & Time Tracking",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Fees",
+            "link_count": 0,
+            "link_to": "Legal Fee",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Expenses",
+            "link_count": 0,
+            "link_to": "Legal Expense",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        }
+    ],
+    "modified": "2025-10-05 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Sheria App",
+    "name": "Legal Practice",
+    "owner": "Administrator",
+    "parent_page": "",
+    "restrict_to_domain": "",
+    "roles": [
+        {
+            "role": "Legal Admin"
+        },
+        {
+            "role": "Lawyer"
+        }
+    ],
+    "sequence_id": 1.0,
+    "shortcuts": [],
+    "title": "Legal Practice"
+}

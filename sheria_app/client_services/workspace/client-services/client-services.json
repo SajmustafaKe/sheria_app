@@ -1,0 +1,118 @@
+{
+    "category": "Modules",
+    "charts": [
+        {
+            "chart_name": "Service Request Status",
+            "label": "Service Request Status"
+        },
+        {
+            "chart_name": "Service Ratings",
+            "label": "Service Ratings"
+        }
+    ],
+    "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Client Services Management\", \"level\": 2}}, {\"type\": \"paragraph\", \"data\": {\"text\": \"Manage client service requests, legal consultations, document preparation, and client feedback.\"}}, {\"type\": \"spacer\", \"data\": {}}, {\"type\": \"header\", \"data\": {\"text\": \"Service Metrics\", \"level\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pending Service Requests\", \"label\": \"Pending Service Requests\"}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Active Services\", \"label\": \"Active Services\"}}, {\"type\": \"spacer\", \"data\": {}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Service Request Status\", \"label\": \"Service Request Status\", \"width\": \"Half\"}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Service Ratings\", \"label\": \"Service Ratings\", \"width\": \"Half\"}}]",
+    "creation": "2025-10-05 00:00:00.000000",
+    "developer_mode_only": 0,
+    "disable_user_customization": 0,
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "extends_another_page": 0,
+    "hide_custom": 0,
+    "icon": "octicon octicon-person",
+    "idx": 0,
+    "is_default": 0,
+    "is_standard": 1,
+    "label": "Client Services",
+    "public": 1,
+    "links": [
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Service Management",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Service Requests",
+            "link_count": 0,
+            "link_to": "Service Request",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal Services",
+            "link_count": 0,
+            "link_to": "Legal Service",
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Additional Services",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Card Break"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal CRM Leads",
+            "link_count": 0,
+            "link_to": "Legal CRM Lead",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Legal CRM Deals",
+            "link_count": 0,
+            "link_to": "Legal CRM Deal",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Document Templates",
+            "link_count": 0,
+            "link_to": "Legal Document Template",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        }
+    ],
+    "modified": "2025-10-05 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Sheria App",
+    "name": "Client Services",
+    "owner": "Administrator",
+    "parent_page": "",
+    "restrict_to_domain": "",
+    "roles": [
+        {
+            "role": "Legal Admin"
+        },
+        {
+            "role": "Lawyer"
+        }
+    ],
+    "sequence_id": 2.0,
+    "shortcuts": [],
+    "title": "Client Services"
+}
